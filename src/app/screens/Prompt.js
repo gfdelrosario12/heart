@@ -36,8 +36,7 @@ export default function Prompt() {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center min-vh-100 bg-light py-5">
       <div className="text-center mb-5">
-        <h1 className="display-4 font-weight-bold text-primary">Does the following work for you?</h1>
-        <p className="lead">Here's a quick summary:</p>
+        <h1 className="display-4 font-weight-bold text-primary">Let's go on a date!</h1>
       </div>
 
       <div className="card p-4 shadow-lg mb-5" style={{ width: '100%', maxWidth: '500px' }}>
