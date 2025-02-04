@@ -38,7 +38,7 @@ export default function Prompt() {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center min-vh-100 bg-light py-5">
       <div className="text-center mb-5">
-        <h1 className="display-4 font-weight-bold text-primary">Does the following work for you?</h1>
+        <h1 className="display-4 font-weight-bold text-primary">Let's Go on a Date!</h1>
         <p className="lead">Here's a quick summary:</p>
       </div>
 
