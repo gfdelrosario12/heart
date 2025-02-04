@@ -26,11 +26,12 @@ export default function Home() {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center min-vh-100 bg-light position-relative">
       <h1 className="mb-4 text-center text-primary font-weight-bold">Will You be My Valentine? 💕</h1>
+      <p>- Gladwin(Your Crushie)</p>
       
       {/* Yes Button */}
       <button 
         onClick={handleRouteChange} 
-        className="btn btn-primary btn-lg mb-4 rounded-pill" // Bootstrap classes for rounded button
+        className="btn btn-primary btn-lg my-2 rounded-pill" // Bootstrap classes for rounded button
       >
         Yes
       </button>
@@ -38,7 +39,7 @@ export default function Home() {
       {/* No Button */}
       <button
         onClick={handleMoveButton}
-        className="btn btn-danger btn-lg position-absolute rounded-pill" // Bootstrap classes for rounded button
+        className="btn btn-danger btn-lg my-5 position-absolute rounded-pill" // Bootstrap classes for rounded button
         style={{
           top: buttonPosition.top,
           left: buttonPosition.left,
