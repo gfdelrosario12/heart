@@ -43,7 +43,7 @@ export default function Change() {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center min-vh-100 bg-light py-5">
       <div className="text-center mb-5">
-        <h1 className="display-4 font-weight-bold text-primary">Set Your Event Details</h1>
+        <h1 className="display-4 font-weight-bold text-primary">When thou?</h1>
         <p className="lead">Select a date and time for the event</p>
       </div>
 
