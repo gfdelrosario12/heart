@@ -9,6 +9,7 @@ export default function Change() {
   const router = useRouter();
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
+  const [isSending, setIsSending] = useState(false); // Add a loading state
 
   const handleDateChange = (event) => setDate(event.target.value);
   const handleTimeChange = (event) => setTime(event.target.value);
@@ -19,6 +20,7 @@ export default function Change() {
       return;
     }
 
+    setIsSending(true); // Set the loading state to true
     const emailDetails = {
       to_name: 'Glide',
       from_name: 'Denie',
@@ -31,13 +33,15 @@ export default function Change() {
       .then(
         (response) => {
           console.log('Email sent successfully', response);
-          alert('Email sent successfully!');
+          alert('Responses Saved! Redirecting...');
+          router.push('/screens/thanks'); // Navigate to /screens/thanks after successful email
         },
         (error) => {
           console.error('Error sending email:', error);
           alert('Failed to send email: ' + error.text);
         }
-      );
+      )
+      .finally(() => setIsSending(false)); // Reset the loading state
   };
 
   return (
@@ -72,8 +76,12 @@ export default function Change() {
       </div>
 
       <div className="d-flex flex-column align-items-center gap-3">
-        <button onClick={sendEmail} className="btn btn-primary btn-lg w-75 rounded-pill">
-          Send Email with Details
+        <button
+          onClick={sendEmail}
+          className="btn btn-primary btn-lg w-75 rounded-pill"
+          disabled={isSending} // Disable button while email is sending
+        >
+          {isSending ? 'Sending...' : 'Send Email with Details'}
         </button>
       </div>
     </div>

@@ -1,0 +1,7 @@
+.hover-move {
+    transition: transform 0.3s ease;
+  }
+  .hover-move:hover {
+    transform: translateY(-10px);
+  }
+  
