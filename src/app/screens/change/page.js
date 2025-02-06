@@ -81,7 +81,7 @@ export default function Change() {
           className="btn btn-primary btn-lg w-75 rounded-pill"
           disabled={isSending} // Disable button while email is sending
         >
-          {isSending ? 'Sending...' : 'This One!'}
+          {isSending ? 'Saving...' : 'This One!'}
         </button>
       </div>
     </div>
